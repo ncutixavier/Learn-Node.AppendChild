@@ -6,7 +6,7 @@ const renderPost = (doc) => {
 
     const title = document.createElement('h1')
     title.setAttribute('class', 'post-title')
-    title.textContent = doc.title
+    title.textContent = doc.author
 
     const content = document.createElement('p')
     content.setAttribute('class', 'post-content')
@@ -68,8 +68,8 @@ console.log(posts)
 
 fetch('http://127.0.0.1:5020/api/v1/blogs', {
     method: 'GET'
-}).then(res => res.json())
-    .then(dt => {
-        console.log(dt)
-        dt.data.articles.forEach(article => renderPost(article))
-    })
+}).then(res=>res.json())
+.then(dt=>{
+    console.log(dt)
+    dt.data.articles.forEach(article => renderPost(article))
+})
