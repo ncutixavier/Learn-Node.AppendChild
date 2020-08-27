@@ -30,3 +30,11 @@ html{
     line-height: 1.5;
     text-align: justify;
 }
+
+.post-delete{
+    background-color: brown;
+    border: none;
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+    color: #fff;
+}
